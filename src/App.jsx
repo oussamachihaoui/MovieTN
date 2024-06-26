@@ -1,9 +1,15 @@
 import React from 'react'
+import MovieList from './Components/MovieList'
+
+
 
 const App = () => {
   return (
-    <div>
-      <h1 className=' text-slate-950 text-3xl border border-red-600 m-10'>Hello world</h1>
+    <div className=' grid grid-cols-3 gap-5'>
+      
+      <MovieList/>
+      
+
     </div>
   )
 }
