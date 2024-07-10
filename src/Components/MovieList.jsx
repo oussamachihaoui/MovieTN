@@ -1,13 +1,15 @@
 import React from 'react'
 import MovieCard from './MovieCard'
-import moviesDB from '../../public/movieData'
+import moviesDB from '../../public/movieData.js'
+import { useSelector } from 'react-redux'
 
 
 
 const MovieList = () => {
+  const {moviesData}=useSelector(state=>state.movieStore)
   return (
     <>
-      {moviesDB.map((movie=> <MovieCard data={movie} key={movie.id}/>))}
+      {moviesData.map((movie=> <MovieCard data={movie} key={movie.id}/>))}
     </>
   )
 }
